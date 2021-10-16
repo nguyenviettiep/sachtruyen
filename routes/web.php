@@ -4,6 +4,7 @@ use App\Http\Controllers\DanhmuctruyenController;
 use App\Http\Controllers\TruyenController;
 use App\Http\Controllers\ChapterController;
 use App\Http\Controllers\indexController;
+use App\Http\Controllers\UserController;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
@@ -39,5 +40,6 @@ Route::resource('/chapter', ChapterController::class);
 Route::get('/custom_error', function(){
     return Artisan::call('php artisan vendor:publish --tag=laravel-errors');
 });
+Route::resource('/user', UserController::class);
 
 
